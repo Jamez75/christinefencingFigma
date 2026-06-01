@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Heart, CreditCard } from 'lucide-react';
+import { Heart, CreditCard, Banknote } from 'lucide-react';
 import { ProfileBanner } from './ProfileBanner';
 import { PageNav } from './PageNav';
 
 export function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customAmount, setCustomAmount] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState<'gcash' | 'stripe' | null>(null);
+  const [paymentMethod, setPaymentMethod] = useState<'gcash' | 'stripe' | 'wise' | null>(null);
   const [showThankYou, setShowThankYou] = useState(false);
 
   const presetAmounts = [500, 1000, 2500, 5000, 10000];
@@ -33,7 +33,7 @@ export function DonatePage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl mb-2 text-[var(--brand-primary)]">Support My Journey</h1>
           <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-[var(--text-primary)]">
             Your generous donation helps cover training costs, equipment, and competition travel expenses.
           </p>
         </div>
@@ -61,11 +61,11 @@ export function DonatePage() {
                 className={`p-4 rounded-lg border-2 transition-all ${
                   selectedAmount === amount
                     ? 'border-[var(--brand-primary)] bg-[var(--brand-primary)] text-white'
-                    : 'border-gray-300 hover:border-[var(--brand-primary)]'
+                    : 'border-[var(--bg-subtle)] hover:border-[var(--brand-primary)]'
                 }`}
               >
                 <div>₱{amount.toLocaleString()}</div>
-                <div className={`text-sm mt-1 ${selectedAmount === amount ? 'text-white/80' : 'text-gray-500'}`}>
+                <div className={`text-sm mt-1 ${selectedAmount === amount ? 'text-white/80' : 'text-[var(--text-secondary)]'}`}>
                   ${convertToUSD(amount)} USD
                 </div>
               </button>
@@ -73,9 +73,9 @@ export function DonatePage() {
           </div>
 
           <div className="mb-8">
-            <label className="block mb-2 text-gray-700">Or enter custom amount</label>
+            <label className="block mb-2 text-[var(--text-primary)]">Or enter custom amount</label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₱</span>
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]">₱</span>
               <input
                 type="number"
                 value={customAmount}
@@ -84,11 +84,11 @@ export function DonatePage() {
                   setSelectedAmount(null);
                 }}
                 placeholder="Enter amount in PHP"
-                className="w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
+                className="w-full pl-10 pr-4 py-3 border-2 border-[var(--bg-subtle)] rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
               />
             </div>
             {customAmount && parseFloat(customAmount) > 0 && (
-              <p className="text-sm text-gray-600 mt-2">
+              <p className="text-sm text-[var(--text-secondary)] mt-2">
                 ≈ ${convertToUSD(parseFloat(customAmount))} USD
               </p>
             )}
@@ -97,13 +97,13 @@ export function DonatePage() {
           <h2 className="text-2xl mb-2 text-[var(--brand-secondary)]">Payment Method</h2>
           <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
 
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
             <button
               onClick={() => setPaymentMethod('gcash')}
               className={`p-6 rounded-lg border-2 transition-all ${
                 paymentMethod === 'gcash'
-                  ? 'border-[var(--brand-primary)] bg-blue-50'
-                  : 'border-gray-300 hover:border-[var(--brand-primary)]'
+                  ? 'border-[var(--brand-primary)] bg-[var(--bg-light)]'
+                  : 'border-[var(--bg-subtle)] hover:border-[var(--brand-primary)]'
               }`}
             >
               <div className="flex items-center justify-center gap-3">
@@ -118,8 +118,8 @@ export function DonatePage() {
               onClick={() => setPaymentMethod('stripe')}
               className={`p-6 rounded-lg border-2 transition-all ${
                 paymentMethod === 'stripe'
-                  ? 'border-[var(--brand-primary)] bg-blue-50'
-                  : 'border-gray-300 hover:border-[var(--brand-primary)]'
+                  ? 'border-[var(--brand-primary)] bg-[var(--bg-light)]'
+                  : 'border-[var(--bg-subtle)] hover:border-[var(--brand-primary)]'
               }`}
             >
               <div className="flex items-center justify-center gap-3">
@@ -127,11 +127,27 @@ export function DonatePage() {
                 <span className="text-lg">Stripe</span>
               </div>
             </button>
+
+            <button
+              onClick={() => setPaymentMethod('wise')}
+              className={`p-6 rounded-lg border-2 transition-all ${
+                paymentMethod === 'wise'
+                  ? 'border-[var(--brand-primary)] bg-[var(--bg-light)]'
+                  : 'border-[var(--bg-subtle)] hover:border-[var(--brand-primary)]'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00B9FF' }}>
+                  <Banknote size={24} className="text-white" />
+                </div>
+                <span className="text-lg">Wise</span>
+              </div>
+            </button>
           </div>
 
           {paymentMethod === 'gcash' && (
-            <div className="mb-6 p-4 rounded-lg bg-blue-50 border-l-4 border-[var(--brand-primary)]">
-              <p className="text-sm text-gray-700">
+            <div className="mb-6 p-4 rounded-lg bg-[var(--bg-light)] border-l-4 border-[var(--brand-primary)]">
+              <p className="text-sm text-[var(--text-primary)]">
                 <strong>GCash Number:</strong> +63 xxx xxx xxxx<br />
                 <strong>Account Name:</strong> Fencing Dreams Fund<br />
                 Please use your email as reference.
@@ -142,31 +158,42 @@ export function DonatePage() {
           {paymentMethod === 'stripe' && (
             <div className="mb-6 space-y-4">
               <div>
-                <label className="block mb-2 text-gray-700">Card Number</label>
+                <label className="block mb-2 text-[var(--text-primary)]">Card Number</label>
                 <input
                   type="text"
                   placeholder="1234 5678 9012 3456"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-[var(--bg-subtle)] rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block mb-2 text-gray-700">Expiry Date</label>
+                  <label className="block mb-2 text-[var(--text-primary)]">Expiry Date</label>
                   <input
                     type="text"
                     placeholder="MM/YY"
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
+                    className="w-full px-4 py-3 border-2 border-[var(--bg-subtle)] rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-gray-700">CVC</label>
+                  <label className="block mb-2 text-[var(--text-primary)]">CVC</label>
                   <input
                     type="text"
                     placeholder="123"
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
+                    className="w-full px-4 py-3 border-2 border-[var(--bg-subtle)] rounded-lg focus:border-[var(--brand-primary)] focus:outline-none"
                   />
                 </div>
               </div>
+            </div>
+          )}
+
+          {paymentMethod === 'wise' && (
+            <div className="mb-6 p-4 rounded-lg bg-[var(--bg-light)] border-l-4 border-[var(--brand-primary)]">
+              <p className="text-sm text-[var(--text-primary)]">
+                <strong>Wise Email:</strong> fencingdreams@email.com<br />
+                <strong>Account Name:</strong> Fencing Dreams Fund<br />
+                <strong>Country:</strong> Philippines<br />
+                Please include your name in the transfer note.
+              </p>
             </div>
           )}
 
@@ -178,7 +205,7 @@ export function DonatePage() {
             Complete Donation
           </button>
 
-          <p className="text-sm text-gray-500 text-center mt-6">
+          <p className="text-sm text-[var(--text-secondary)] text-center mt-6">
             This is a prototype. No actual payment will be processed.
           </p>
         </div>
@@ -193,7 +220,7 @@ export function DonatePage() {
               </div>
               <div>
                 <h3 className="mb-1">Equipment</h3>
-                <p className="text-gray-600">Quality fencing gear including masks, jackets, gloves, and weapons</p>
+                <p className="text-[var(--text-secondary)]">Quality fencing gear including masks, jackets, gloves, and weapons</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -202,7 +229,7 @@ export function DonatePage() {
               </div>
               <div>
                 <h3 className="mb-1">Advanced Training</h3>
-                <p className="text-gray-600">Weight training programs and private coaching fees with experienced coaches and national team trainers</p>
+                <p className="text-[var(--text-secondary)]">Weight training programs and private coaching fees with experienced coaches and national team trainers</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -211,7 +238,7 @@ export function DonatePage() {
               </div>
               <div>
                 <h3 className="mb-1">International travel</h3>
-                <p className="text-gray-600">Flights, accommodation, and registration fees for upcoming tournaments in Malaysia, Hong Kong, and Australia</p>
+                <p className="text-[var(--text-secondary)]">Flights, accommodation, and registration fees for upcoming tournaments in Malaysia, Hong Kong, and Australia</p>
               </div>
             </div>
           </div>

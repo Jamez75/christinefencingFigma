@@ -6,6 +6,8 @@ import { BottomNav } from './components/BottomNav';
 import { HomePage } from './components/HomePage';
 import { DonatePage } from './components/DonatePage';
 import { GalleryPage } from './components/GalleryPage';
+import { AchievementsPage } from './components/AchievementsPage';
+import { EventsPage } from './components/EventsPage';
 import { AboutPage } from './components/AboutPage';
 import { PWAHead } from './components/PWAHead';
 
@@ -37,6 +39,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
+          <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
         <BottomNav />

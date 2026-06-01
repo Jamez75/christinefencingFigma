@@ -27,8 +27,8 @@ export function Navigation() {
                 to={item.path}
                 className={`transition-colors ${
                   location.pathname === item.path
-                    ? 'text-[#CE1126]'
-                    : 'text-gray-700 hover:text-[#0038A8]'
+                    ? 'text-[var(--brand-secondary)]'
+                    : 'text-[var(--text-primary)] hover:text-[var(--brand-primary)]'
                 }`}
               >
                 {item.label}

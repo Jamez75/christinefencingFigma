@@ -47,11 +47,11 @@ export function AboutPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-gray-700 mb-4">
+          <p className="text-[var(--text-primary)] mb-4">
             Hi! I'm Christine May Morales, a 13-year-old competitive fencer and straight "A" student at the University of the East in Manila, Philippines.
             Fencing has been my passion for the past 8 years, teaching me discipline, focus, and perseverance.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-[var(--text-primary)] mb-4">
             What makes my journey unique is that I compete in all three fencing disciplines: <strong className="text-[var(--brand-primary)]">Foil</strong>, <strong className="text-[var(--brand-primary)]">Sabre</strong>, and <strong className="text-[var(--brand-primary)]">Épée</strong>.
             Each weapon requires different techniques and strategies, and mastering all three has made me a more versatile and skilled athlete.
           </p>
@@ -67,7 +67,7 @@ export function AboutPage() {
                   <div className="text-3xl">{discipline.icon}</div>
                   <div className="flex-1">
                     <h3 className="text-lg mb-1 text-[var(--brand-secondary)]">{discipline.name}</h3>
-                    <p className="text-sm text-gray-700">{discipline.description}</p>
+                    <p className="text-sm text-[var(--text-primary)]">{discipline.description}</p>
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-1">Multi-Discipline Athlete</h3>
-                <p className="text-sm text-gray-700">Training in all three weapons has given me a comprehensive understanding of fencing and made me a more adaptable competitor.</p>
+                <p className="text-sm text-[var(--text-primary)]">Training in all three weapons has given me a comprehensive understanding of fencing and made me a more adaptable competitor.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -94,7 +94,7 @@ export function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-1">Academic Excellence</h3>
-                <p className="text-sm text-gray-700">Maintaining straight A's while competing at a national level requires careful time management and dedication to both my studies and sport.</p>
+                <p className="text-sm text-[var(--text-primary)]">Maintaining straight A's while competing at a national level requires careful time management and dedication to both my studies and sport.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -103,7 +103,7 @@ export function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-1">International Dreams</h3>
-                <p className="text-sm text-gray-700">My goal is to represent the Philippines in international competitions, including the SEA Games and eventually the Olympics.</p>
+                <p className="text-sm text-[var(--text-primary)]">My goal is to represent the Philippines in international competitions, including the SEA Games and eventually the Olympics.</p>
               </div>
             </div>
           </div>
@@ -135,23 +135,23 @@ export function AboutPage() {
         <div className="bg-white rounded-xl shadow-md p-6 border-2 border-[var(--bg-subtle)]">
           <h2 className="text-xl mb-2 text-[var(--brand-primary)]">How You Can Help</h2>
           <div className="h-1 w-16 rounded mb-3 bg-[var(--brand-secondary)]" />
-          <p className="text-sm text-gray-700 mb-4">
+          <p className="text-sm text-[var(--text-primary)] mb-4">
             Training in three disciplines requires more equipment, coaching time, and competition fees. Your support helps me:
           </p>
           <ul className="space-y-2 mb-4">
-            <li className="flex items-start gap-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2 text-sm text-[var(--text-primary)]">
               <span className="text-[var(--brand-secondary)]">•</span>
               <span>Purchase and maintain three sets of specialized equipment</span>
             </li>
-            <li className="flex items-start gap-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2 text-sm text-[var(--text-primary)]">
               <span className="text-[var(--brand-secondary)]">•</span>
               <span>Train with coaches specialized in each discipline</span>
             </li>
-            <li className="flex items-start gap-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2 text-sm text-[var(--text-primary)]">
               <span className="text-[var(--brand-secondary)]">•</span>
               <span>Travel to regional and international competitions</span>
             </li>
-            <li className="flex items-start gap-2 text-sm text-gray-700">
+            <li className="flex items-start gap-2 text-sm text-[var(--text-primary)]">
               <span className="text-[var(--brand-secondary)]">•</span>
               <span>Participate in specialized training camps</span>
             </li>

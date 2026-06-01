@@ -51,7 +51,7 @@ export function BottomNav() {
 
   return (
     <>
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 pb-safe">
+      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[var(--bg-subtle)] z-50 pb-safe">
         <div className="grid grid-cols-4 max-w-lg mx-auto">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
@@ -66,10 +66,9 @@ export function BottomNav() {
                 >
                   <Icon
                     size={24}
-                    className="text-[var(--brand-primary)]"
-                    className="mb-1"
+                    className="text-[var(--brand-primary)] mb-1"
                   />
-                  <span className="text-xs" style={{ color: '#0038A8' }}>
+                  <span className="text-xs text-[var(--brand-primary)]">
                     {item.label}
                   </span>
                 </button>
@@ -84,12 +83,10 @@ export function BottomNav() {
               >
                 <Icon
                   size={24}
-                  className={isActive ? 'text-[var(--brand-secondary)]' : 'text-[var(--brand-primary)]'}
-                  className="mb-1"
+                  className={`mb-1 ${isActive ? 'text-[var(--brand-secondary)]' : 'text-[var(--brand-primary)]'}`}
                 />
                 <span
-                  className="text-xs"
-                  className={isActive ? 'text-[var(--brand-secondary)]' : 'text-[var(--brand-primary)]'}
+                  className={`text-xs ${isActive ? 'text-[var(--brand-secondary)]' : 'text-[var(--brand-primary)]'}`}
                 >
                   {item.label}
                 </span>
@@ -112,7 +109,7 @@ export function BottomNav() {
               <h3 className="text-lg text-[var(--brand-primary)]">Share</h3>
               <button
                 onClick={() => setShowShareModal(false)}
-                className="p-2 hover:bg-gray-100 rounded-full"
+                className="p-2 hover:bg-[var(--bg-light)] rounded-full"
               >
                 <CloseIcon size={20} />
               </button>
@@ -121,7 +118,7 @@ export function BottomNav() {
               <div className="p-4 space-y-2">
                 <button
                   onClick={shareToFacebook}
-                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--bg-light)] transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#1877F2' }}>
                     <Facebook size={20} className="text-white" />
@@ -130,7 +127,7 @@ export function BottomNav() {
                 </button>
                 <button
                   onClick={shareToX}
-                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--bg-light)] transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full flex items-center justify-center bg-black">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
@@ -141,7 +138,7 @@ export function BottomNav() {
                 </button>
                 <button
                   onClick={copyLink}
-                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--bg-light)] transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full flex items-center justify-center bg-[var(--brand-accent)]">
                     <LinkIcon size={20} className="text-[var(--brand-primary)]" />
@@ -150,7 +147,7 @@ export function BottomNav() {
                 </button>
                 <button
                   onClick={() => setShowQRCode(true)}
-                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-[var(--bg-light)] transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full flex items-center justify-center bg-[var(--brand-primary)]">
                     <QrCode size={20} className="text-white" />
@@ -169,7 +166,7 @@ export function BottomNav() {
                     style={{ color: 'var(--brand-primary)' }}
                   />
                 </div>
-                <p className="text-center text-gray-600 mt-4 mb-2">Scan to visit</p>
+                <p className="text-center text-[var(--text-secondary)] mt-4 mb-2">Scan to visit</p>
                 <button
                   onClick={() => setShowQRCode(false)}
                   className="mt-2 px-6 py-2 rounded-lg text-white bg-[var(--brand-secondary)]"

@@ -48,14 +48,14 @@ export function GalleryPage() {
           <PageNav />
           <h1 className="text-4xl mb-2 text-center text-[var(--brand-primary)]">Gallery</h1>
           <div className="h-1 w-16 rounded mx-auto mb-2 bg-[var(--brand-secondary)]" />
-          <p className="text-center text-gray-600 mb-8">Journey through competitions and training</p>
+          <p className="text-center text-[var(--text-secondary)] mb-8">Journey through competitions and training</p>
 
           <div className="space-y-12">
             {events.map((event, eventIdx) => (
               <div key={eventIdx}>
                 <div className="mb-4">
                   <h2 className="text-2xl mb-1 text-[var(--brand-secondary)]">{event.name}</h2>
-                  <p className="text-gray-600">
+                  <p className="text-[var(--text-secondary)]">
                     {event.date} • {event.location}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export function GalleryPage() {
             />
             <div className="text-white text-center mt-4">
               <p className="text-lg">{events[selectedImage.eventIdx].images[selectedImage.imageIdx].alt}</p>
-              <p className="text-sm text-gray-400 mt-1">{events[selectedImage.eventIdx].name}</p>
+              <p className="text-sm text-[var(--text-secondary)] mt-1">{events[selectedImage.eventIdx].name}</p>
             </div>
           </div>
         </div>

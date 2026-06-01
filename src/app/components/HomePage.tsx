@@ -51,7 +51,7 @@ export function HomePage() {
 
         <PageNav />
 
-        <div className="border-t border-gray-300 mb-6" />
+        <div className="border-t border-[var(--bg-subtle)] mb-6" />
 
         <div className="mb-8">
           <h2 className="text-xl mb-2 text-[var(--brand-primary)]">Recent Highlights</h2>
@@ -73,7 +73,7 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="border-t border-gray-300 mb-6" />
+        <div className="border-t border-[var(--bg-subtle)] mb-6" />
       </div>
 
       <div className="px-6 pb-6">
