@@ -130,16 +130,7 @@ export function AboutPage() {
               </div>
             ))}
           </div>
-          <button
-            onClick={() => {
-              alert('PDF download will be available soon!');
-            }}
-            className="mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-white transition-all active:scale-95"
-            style={{ background: 'var(--brand-gradient)' }}
-          >
-            <Download size={18} />
-            <span>Download Achievements PDF</span>
-          </button>
+          
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-6 border-2 border-[var(--bg-subtle)]">
