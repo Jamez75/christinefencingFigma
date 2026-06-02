@@ -17,7 +17,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link to="/about" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)]"></div>
-            <span className="text-xl text-[var(--brand-primary)]">Fencing Dreams</span>
+            <span className="text-xl text-[var(--brand-primary)] hidden md:inline">Christine Fencing</span>
           </Link>
 
           <div className="flex space-x-8">

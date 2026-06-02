@@ -9,7 +9,7 @@ export function DonatePage() {
   const [paymentMethod, setPaymentMethod] = useState<'gcash' | 'stripe' | 'wise' | null>(null);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const presetAmounts = [500, 1000, 2500, 5000, 10000];
+  const presetAmounts = [500, 1000, 2500, 5000, 10000, 29412];
   const phpToUsd = 0.017; // Approximate conversion rate
 
   const convertToUSD = (php: number) => {
