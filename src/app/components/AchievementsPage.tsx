@@ -1,6 +1,5 @@
 import { Trophy, Medal, Award, Star, Target } from 'lucide-react';
 import { ProfileBanner } from './ProfileBanner';
-import { PageNav } from './PageNav';
 
 export function AchievementsPage() {
   const achievements = [
@@ -87,10 +86,9 @@ export function AchievementsPage() {
   return (
     <div className="min-h-screen bg-white">
       <ProfileBanner />
-      <div className="px-6 pt-[65px] pb-6">
-        <PageNav />
-
+      <div className="px-6 pt-4 pb-6">
         <div className="mb-8">
+          <div className="h-1 w-16 rounded mx-auto bg-[var(--brand-secondary)] mb-4" />
           <h1 className="text-center text-3xl mb-2 text-[var(--brand-primary)]">Achievements</h1>
           <div className="h-1 w-16 rounded mx-auto bg-[var(--brand-secondary)]" />
         </div>
@@ -139,6 +137,7 @@ export function AchievementsPage() {
         </div>
 
         <div className="mt-8 bg-white rounded-lg shadow-md p-6 border-2 border-[var(--bg-subtle)]">
+          <div className="h-1 w-16 rounded mb-3 bg-[var(--brand-secondary)]" />
           <h2 className="text-xl mb-2 text-[var(--brand-primary)]">Looking Ahead</h2>
           <div className="h-1 w-16 rounded mb-3 bg-[var(--brand-secondary)]" />
           <p className="text-sm text-[var(--text-primary)] mb-4">

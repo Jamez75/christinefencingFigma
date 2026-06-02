@@ -1,7 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Trophy, Award, Target, GraduationCap, Swords, Download } from 'lucide-react';
 import { ProfileBanner } from './ProfileBanner';
-import { PageNav } from './PageNav';
 
 export function AboutPage() {
   const disciplines = [
@@ -32,9 +31,9 @@ export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <ProfileBanner />
-      <div className="px-6 pt-[65px] pb-6">
-        <PageNav />
+      <div className="px-6 pt-4 pb-6">
         <div className="mb-8">
+          <div className="h-1 w-16 rounded mx-auto bg-[var(--brand-secondary)] mb-4" />
           <h1 className="text-center text-3xl mb-2 text-[var(--brand-primary)]">About Me</h1>
           <div className="h-1 w-16 rounded mx-auto bg-[var(--brand-secondary)]" />
         </div>
@@ -58,6 +57,7 @@ export function AboutPage() {
         </div>
 
         <div className="mb-8">
+          <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-primary)]">The Three Disciplines</h2>
           <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <div className="space-y-4">
@@ -76,6 +76,7 @@ export function AboutPage() {
         </div>
 
         <div className="mb-8">
+          <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-primary)]">My Journey</h2>
           <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <div className="space-y-4">
@@ -110,6 +111,7 @@ export function AboutPage() {
         </div>
 
         <div className="mb-8">
+          <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-primary)]">Recent Achievements</h2>
           <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
           <div className="space-y-3">
@@ -134,6 +136,7 @@ export function AboutPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-6 border-2 border-[var(--bg-subtle)]">
+          <div className="h-1 w-16 rounded mb-3 bg-[var(--brand-secondary)]" />
           <h2 className="text-xl mb-2 text-[var(--brand-primary)]">How You Can Help</h2>
           <div className="h-1 w-16 rounded mb-3 bg-[var(--brand-secondary)]" />
           <p className="text-sm text-[var(--text-primary)] mb-4">

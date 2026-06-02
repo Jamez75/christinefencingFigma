@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Heart, CreditCard, Banknote } from 'lucide-react';
 import { ProfileBanner } from './ProfileBanner';
-import { PageNav } from './PageNav';
 
 export function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -27,10 +26,10 @@ export function DonatePage() {
   return (
     <div className="min-h-screen bg-white">
       <ProfileBanner />
-      <div className="pt-[65px] pb-8 px-4">
+      <div className="pt-4 pb-8 px-4">
         <div className="max-w-2xl mx-auto">
-        <PageNav />
         <div className="text-center mb-12">
+          <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
           <h1 className="text-4xl mb-2 text-[var(--brand-primary)]">Support My Journey</h1>
           <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
           <p className="text-lg text-[var(--text-primary)]">
@@ -47,6 +46,7 @@ export function DonatePage() {
         )}
 
         <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-secondary)]">Select Donation Amount</h2>
           <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
 
@@ -97,6 +97,7 @@ export function DonatePage() {
             )}
           </div>
 
+          <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-secondary)]">Payment Method</h2>
           <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
 
@@ -215,6 +216,7 @@ export function DonatePage() {
         </div>
 
         <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
+          <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
           <h2 className="text-2xl mb-2 text-[var(--brand-primary)]">How Your Donation Helps</h2>
           <div className="h-1 w-16 rounded mb-6 bg-[var(--brand-secondary)]" />
           <div className="space-y-4">

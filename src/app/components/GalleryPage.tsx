@@ -2,7 +2,6 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import { ProfileBanner } from './ProfileBanner';
-import { PageNav } from './PageNav';
 
 export function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<{ eventIdx: number; imageIdx: number } | null>(null);
@@ -43,9 +42,9 @@ export function GalleryPage() {
   return (
     <div className="min-h-screen bg-white">
       <ProfileBanner />
-      <div className="pt-[65px] pb-8 px-4">
+      <div className="pt-4 pb-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <PageNav />
+          <div className="h-1 w-16 rounded mx-auto mb-2 bg-[var(--brand-secondary)]" />
           <h1 className="text-4xl mb-2 text-center text-[var(--brand-primary)]">Gallery</h1>
           <div className="h-1 w-16 rounded mx-auto mb-2 bg-[var(--brand-secondary)]" />
           <p className="text-center text-[var(--text-secondary)] mb-8">Journey through competitions and training</p>

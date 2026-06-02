@@ -30,8 +30,10 @@ export function HomePage() {
     <div className="min-h-screen bg-white">
       <ProfileBanner />
 
-      <div className="px-6 pt-[65px]">
+      <div className="px-6 pt-4">
+        <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
         <h1 className="text-center text-4xl mb-1 text-[var(--brand-primary)]">Christine May Morales</h1>
+        <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
         <p className="text-center text-sm mb-1 text-[var(--text-primary)]">Fencing prodigy</p>
         <p className="text-center text-sm mb-1 text-[var(--text-primary)]">Straight "A" Student - UE Manila</p>
 
@@ -54,8 +56,9 @@ export function HomePage() {
         <div className="border-t border-[var(--bg-subtle)] mb-6" />
 
         <div className="mb-8">
-          <h2 className="text-xl mb-2 text-[var(--brand-primary)]">Recent Highlights</h2>
-          <div className="h-1 w-16 rounded mb-4 bg-[var(--brand-secondary)]" />
+          <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
+          <h2 className="text-xl mb-2 text-center text-[var(--brand-primary)]">Recent Highlights</h2>
+          <div className="h-1 w-16 rounded mx-auto mb-4 bg-[var(--brand-secondary)]" />
           <div className="grid grid-cols-3 gap-2">
             {recentPhotos.map((photo, idx) => (
               <Link
