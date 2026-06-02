@@ -18,7 +18,7 @@ export function PageNav() {
           <Link
             key={item.path}
             to={item.path}
-            className={`flex-1 py-[9.5px] px-3 rounded-lg text-center transition-all active:scale-95 whitespace-nowrap text-white`}
+            className={`flex-1 py-[7.5px] px-[10px] rounded-lg text-center transition-all active:scale-95 whitespace-nowrap text-white`}
             style={{
               background: isActive ? 'var(--brand-secondary)' : 'var(--brand-gradient)',
             }}
