@@ -35,14 +35,16 @@ export default function App() {
       <PWAHead />
       <div className="min-h-screen bg-white pb-20 md:pb-0">
         <Navigation />
-        <Routes>
-          <Route path="/" element={<AboutPage />} />
-          <Route path="/donate" element={<DonatePage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/achievements" element={<AchievementsPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+        <main className="md:px-[20px]">
+          <Routes>
+            <Route path="/" element={<AboutPage />} />
+            <Route path="/donate" element={<DonatePage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/achievements" element={<AchievementsPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </main>
         <BottomNav />
       </div>
     </BrowserRouter>
