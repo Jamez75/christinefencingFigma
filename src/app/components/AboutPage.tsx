@@ -46,14 +46,8 @@ export function AboutPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-[var(--text-primary)] mb-4">
-            Hi! I'm Christine May Morales, a 13-year-old competitive fencer and straight "A" student at the University of the East in Manila, Philippines.
-            Fencing has been my passion for the past 8 years, teaching me discipline, focus, and perseverance.
-          </p>
-          <p className="text-[var(--text-primary)] mb-4">
-            What makes my journey unique is that I compete in all three fencing disciplines: <strong className="text-[var(--brand-primary)]">Foil</strong>, <strong className="text-[var(--brand-primary)]">Sabre</strong>, and <strong className="text-[var(--brand-primary)]">Épée</strong>.
-            Each weapon requires different techniques and strategies, and mastering all three has made me a more versatile and skilled athlete.
-          </p>
+          <p className="text-[var(--text-primary)] mb-4">Hi! I'm Christine May Morales, a 13-year-old competitive foil fencer from Manila, Philippines, and an Honor Roll student-athlete. I have been fencing since I was 4 years old, and the sport has taught me discipline, resilience, focus, and the value of hard work both on and off the piste.</p>
+          <p className="text-[var(--text-primary)] mb-4">What makes my journey unique is my experience competing in all three fencing disciplines—<span className="font-bold">Foil</span><strong className="text-[var(--brand-primary)]">Foil</strong>, <span className="font-bold">Sabre</span><strong className="text-[var(--brand-primary)]">Sabre</strong>, and <span className="font-bold">Épée</span><strong className="text-[var(--brand-primary)]">Épée</strong>. While foil is my primary weapon, training and competing across all three has given me a deeper understanding of the sport and helped me develop versatility, adaptability, and strategic thinking. My goal is to continue growing as both an athlete and a student, represent the Philippines with pride, and inspire other young people to pursue excellence through dedication, perseverance, and passion.</p>
         </div>
 
         <div className="mb-8">
